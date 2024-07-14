@@ -1,0 +1,153 @@
+.content {
+
+  $header: 91px;
+  $footer: 103px;
+
+  flex: 1;
+  padding: 18px 3rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  z-index: 1000;
+  //height: calc(90vh - #{$header + $footer});
+
+  .h {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 400;
+      text-shadow: 1px 1px 1px black;
+    }
+
+    hr {
+      width: 160px;
+      margin: auto;
+      justify-content: center;
+      border-top: 1px solid #ffffff;
+    }
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-bottom: 50px;
+  }
+
+  .content-1 {
+    grid-column: span 1;
+    text-align: center;
+
+  }
+
+  .content-2 {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .content-3 {
+    grid-column: span 1;
+    text-align: center;
+    p {
+      font-size: 13px;
+      font-weight: 200;
+    }
+  }
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+
+
+    .content-1 {
+      text-align: start;
+    }
+
+    .content-2 {
+      text-align: end;
+    }
+
+    .content-1,
+    .content-2 {
+      grid-column: span 1;
+
+      
+    }
+
+    .content-3 {
+      grid-column: span 2;
+    }
+
+    .m-btn {
+      margin-right: 0px !important;
+      margin-bottom: 15px;
+    }
+  }
+
+
+  // .radio-item {
+  //   display: inline-block;
+  //   position: relative;
+  //   padding: 0 6px;
+  //   margin: 10px 0 0;
+  // }
+  
+  input[type='radio'] {
+    display: none;
+  }
+  
+  label {
+    color: #ffffff;
+    font-weight: normal;
+    display: flex;
+    cursor: pointer;
+  }
+
+
+  label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 11px;
+    border: 3px solid #ffffff;
+    margin-bottom: 20px;
+    margin-right: 12px;
+  }
+  
+  input[type="radio"]:checked + label:before {
+    background-color: #ffffff;
+  }
+
+  input[type="radio"]:checked + label:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ffffff; 
+  }
+
+  .content-btn {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 50px;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e88301;
+    }
+  }
+
+  .m-btn {
+    margin-right: 28px;
+  }
+}

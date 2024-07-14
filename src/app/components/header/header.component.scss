@@ -1,0 +1,40 @@
+header {
+  background-color: #0b0c10;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 3rem;
+  //position: fixed;
+
+  position: sticky;
+
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #c5c6c7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.logo:hover {
+    background-color: #e88301;
+}
+
+
+  .header-text {
+    text-align: right;
+
+    .name {
+      font-size: 1rem;
+    }
+  }
+}

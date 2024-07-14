@@ -1,0 +1,117 @@
+footer {
+    background-color: #15161a;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1rem 4rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2a2d34;
+    border-top: 3px solid #0a0b0f;
+    position: flex;
+    bottom: 0;
+    z-index: 1000;
+
+  .footer-item {
+    justify-self: start;
+    .css-box {
+      font-size: 16px;
+      border: 1px solid #ffffff;
+      width: 67px;
+      height: 67px;
+      // padding-left: 3px;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid #e88301;
+        color: #ccc;
+      }
+    }
+
+    span {
+      display: block;
+      margin-left: 5px;
+    }
+  }
+
+  .footer-logo {
+    justify-self: center;
+
+    p {
+      display: flex;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: "";
+        flex-grow: 1;
+        flex-shrink: 1;
+        border-top: 2px solid #ffffff; // Change to border-top for better visibility
+        margin: 0 10px; // Adjust the margin to control the space between the text and the lines
+      }
+    }
+  }
+
+  .footer-button {
+    justify-self: end;
+    position: relative;
+    border: 1px solid #ffffff;
+    padding: 1px 65px;
+    border-radius: 2px;
+
+    .toggle-label {
+      display: block;
+      cursor: pointer;
+      background-color: #15161a;
+      color: #ffffff;
+      border: none;
+      padding: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-menu {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+      background-color: #ffffff;
+      color: #15161a;
+      border: 2px solid #000000;
+      padding: 1rem;
+      margin-bottom: 20px;
+      font-size: 1em;
+      -webkit-box-shadow: 0px -5px 60px 1px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px -5px 60px 1px rgba(0, 0, 0, 1);
+      box-shadow: 0px -5px 60px 1px rgba(0, 0, 0, 1);
+
+      button {
+        display: block;
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        text-align: left;
+        width: 100%;
+        font-weight: 500;
+      }
+
+      button:hover {
+        color: #e88301;
+      }
+
+      &.visible {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    grid-template-columns: auto 1fr;
+
+    .footer-logo {
+      display: none;
+    }
+  }
+}

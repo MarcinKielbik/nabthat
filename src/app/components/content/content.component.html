@@ -1,0 +1,23 @@
+<section class="content">
+  <div class="h">
+    <h1>Nagłowek H1</h1>
+    <hr>
+  </div>
+  <div class="content-1">
+    <h2>BLOK PIERWSZY</h2>
+    <label *ngFor="let car of cars">
+      <input type="radio" name="option" [value]="car.id.toString()" [(ngModel)]="selectedOption" /> {{ car.name }}
+    </label>
+  </div>
+  <div class="content-2">
+    <h2>BLOK DRUGI</h2>
+    <button class="content-btn m-btn" (click)="replaceContent()">ZASTĄP</button>
+    <button class="content-btn" (click)="appendContent()">DOKLEJ</button>
+  </div>
+  <div class="content-3">
+    <h2>BLOK TRZECI</h2>
+    <div *ngFor="let content of displayedContent">
+      <p>{{ content }}</p>
+    </div>
+  </div>
+</section>

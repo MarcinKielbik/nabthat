@@ -1,0 +1,22 @@
+<footer>
+    <div class="footer-item">
+       <div class="css-box">
+        <span>CSS</span>
+        <span>IS</span>
+        <span>AWESOME</span>
+    </div> 
+    </div>
+    
+    <div class="footer-logo">
+        <p>nabthat</p>
+    </div>
+      
+
+    <div class="footer-button">
+        <button class="toggle-label" (click)="toggleMenu()">POKAŻ</button>
+        <div class="footer-menu" [ngClass]="{'visible': menuVisible}">
+            <button (click)="reset()">ZRESETUJ USTAWIENIA</button>
+            <button (click)="addName()">POKAŻ DANE OSOBOWE</button>
+        </div>
+    </div>   
+</footer>
