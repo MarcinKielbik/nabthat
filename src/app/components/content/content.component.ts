@@ -10,6 +10,7 @@ export class ContentComponent implements OnInit {
   cars: any[] = [];
   selectedOption: string = '';
   displayedContent: string[] = [];
+  duplicateMessage: string = '';
 
   constructor(private dataService: DataService) {}
 
@@ -27,15 +28,22 @@ export class ContentComponent implements OnInit {
     const selectedCar = this.cars.find(car => car.id.toString() === this.selectedOption);
     if (selectedCar) {
       this.displayedContent = [selectedCar.name];
-      console.log('Replaced content with:', selectedCar.name);
+      this.duplicateMessage = '';
+      // console.log('Replaced content with:', selectedCar.name);
     }
   }
 
   appendContent() {
     const selectedCar = this.cars.find(car => car.id.toString() === this.selectedOption);
     if (selectedCar) {
-      this.displayedContent.push(selectedCar.name);
-      console.log('Appended content with:', selectedCar.name);
+      if (!this.displayedContent.includes(selectedCar.name)) {
+        this.displayedContent.push(selectedCar.name);
+        this.duplicateMessage = ''; 
+        // console.log('Appended content with:', selectedCar.name);
+      } else {
+        this.duplicateMessage = 'Content already exists: ' + selectedCar.name;
+        alert('Content already exists');
+      }
+    }
   }
-}
 }
