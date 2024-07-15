@@ -13,10 +13,10 @@
       
 
     <div class="footer-button">
-        <button class="toggle-label" (click)="toggleMenu()">POKAŻ</button>
+        <button class="toggle-label" (click)="toggleMenu()"> <strong>POKAŻ</strong> </button>
         <div class="footer-menu" [ngClass]="{'visible': menuVisible}">
-            <button (click)="reset()">ZRESETUJ USTAWIENIA</button>
-            <button (click)="addName()">POKAŻ DANE OSOBOWE</button>
+            <button (click)="reset()"><strong>> ZRESETUJ USTAWIENIA</strong></button>
+            <button (click)="addName()"> <strong>> POKAŻ DANE OSOBOWE</strong> </button>
         </div>
     </div>   
 </footer>

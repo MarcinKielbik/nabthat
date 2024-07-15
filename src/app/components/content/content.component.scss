@@ -1,15 +1,16 @@
 .content {
 
-  $header: 91px;
-  $footer: 103px;
-
+   //$header: 91px;
+  //$footer: 103px;
+  //display: flex;
+  flex-direction: column;
   flex: 1;
-  padding: 18px 3rem 4rem;
+  padding: 18px 3rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   z-index: 1000;
-  //height: calc(90vh - #{$header + $footer});
+  min-height: 72vh;
 
   .h {
     grid-column: 1 / -1;
@@ -40,6 +41,48 @@
     grid-column: span 1;
     text-align: center;
 
+
+
+      
+  input[type='radio'] {
+    display: none;
+  }
+
+    label {
+      color: #ffffff;
+      font-weight: normal;
+      display: flex;
+      cursor: pointer;
+    }
+  
+  
+    label:before {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border-radius: 11px;
+      border: 3px solid #ffffff;
+      margin-bottom: 20px;
+      margin-right: 12px;
+    }
+    
+    input[type="radio"]:checked + label:before {
+      background-color: #ffffff;
+    }
+  
+    input[type="radio"]:checked + label:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffffff; 
+    }
   }
 
   .content-2 {
@@ -85,54 +128,6 @@
     }
   }
 
-
-  // .radio-item {
-  //   display: inline-block;
-  //   position: relative;
-  //   padding: 0 6px;
-  //   margin: 10px 0 0;
-  // }
-  
-  input[type='radio'] {
-    display: none;
-  }
-  
-  label {
-    color: #ffffff;
-    font-weight: normal;
-    display: flex;
-    cursor: pointer;
-  }
-
-
-  label:before {
-    content: " ";
-    display: inline-block;
-    position: relative;
-    width: 18px;
-    height: 18px;
-    border-radius: 11px;
-    border: 3px solid #ffffff;
-    margin-bottom: 20px;
-    margin-right: 12px;
-  }
-  
-  input[type="radio"]:checked + label:before {
-    background-color: #ffffff;
-  }
-
-  input[type="radio"]:checked + label:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #ffffff; 
-  }
-
   .content-btn {
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -150,4 +145,9 @@
   .m-btn {
     margin-right: 28px;
   }
+}
+
+.content:after {
+  content: "";
+  flex-grow: 1;
 }

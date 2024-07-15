@@ -7,7 +7,7 @@ import { UsernameService } from '../../services/username.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
-  firstName: string = 'imię i';
+  firstName: string = 'imię';
   lastName: string = 'nazwisko';
 
   constructor(private usernameService: UsernameService) {}

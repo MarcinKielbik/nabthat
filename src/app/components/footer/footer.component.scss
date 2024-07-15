@@ -11,9 +11,14 @@ footer {
     position: flex;
     bottom: 0;
     z-index: 1000;
+    flex-shrink: 0;
+
+ 
 
   .footer-item {
     justify-self: start;
+    transition: transform .60s ease-in-out;
+
     .css-box {
       font-size: 16px;
       border: 1px solid #ffffff;
@@ -21,6 +26,7 @@ footer {
       height: 67px;
       // padding-left: 3px;
       cursor: pointer;
+      position: relative;
 
       &:hover {
         border: 1px solid #e88301;
@@ -32,6 +38,10 @@ footer {
       display: block;
       margin-left: 5px;
     }
+  }
+
+  .footer-item {
+    transform: rotate(360deg);
   }
 
   .footer-logo {
@@ -46,8 +56,8 @@ footer {
         content: "";
         flex-grow: 1;
         flex-shrink: 1;
-        border-top: 2px solid #ffffff; // Change to border-top for better visibility
-        margin: 0 10px; // Adjust the margin to control the space between the text and the lines
+        border-top: 2px solid #ffffff;
+        margin: 0 10px; 
       }
     }
   }
@@ -81,6 +91,7 @@ footer {
       padding: 1rem;
       margin-bottom: 20px;
       font-size: 1em;
+    //   font-weight: 600;
       -webkit-box-shadow: 0px -5px 60px 1px rgba(0, 0, 0, 1);
       -moz-box-shadow: 0px -5px 60px 1px rgba(0, 0, 0, 1);
       box-shadow: 0px -5px 60px 1px rgba(0, 0, 0, 1);
