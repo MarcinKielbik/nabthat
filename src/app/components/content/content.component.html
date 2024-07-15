@@ -6,7 +6,8 @@
   <div class="content-1">
     <h2>BLOK PIERWSZY</h2>
     <label *ngFor="let car of cars">
-      <input type="radio" name="option" [value]="car.id.toString()" [(ngModel)]="selectedOption" /> {{ car.name }}
+      <input type="radio" name="option" [value]="car.id.toString()" [(ngModel)]="selectedOption" />
+      <p>{{ car.name }}</p>
     </label>
   </div>
   <div class="content-2">

@@ -6,6 +6,7 @@ footer {
     padding: 1rem 4rem;
     width: 100%;
     box-sizing: border-box;
+
     color: #2a2d34;
     border-top: 3px solid #0a0b0f;
     position: flex;
@@ -45,21 +46,33 @@ footer {
   }
 
   .footer-logo {
-    justify-self: center;
 
     p {
-      display: flex;
-      align-items: center;
-
-      &::before,
-      &::after {
-        content: "";
-        flex-grow: 1;
-        flex-shrink: 1;
-        border-top: 2px solid #ffffff;
-        margin: 0 10px; 
+        font-size: large;
+        overflow: hidden;
+        text-align: center;
       }
-    }
+      
+      p::before,
+      p::after {
+        background-color: #2a2d34;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 10%;
+      }
+      
+      p::before {
+        right: 1em;
+        margin-left: -50%;
+      }
+      
+      p::after {
+        left: 1em;
+        margin-right: -50%;
+      }
   }
 
   .footer-button {
