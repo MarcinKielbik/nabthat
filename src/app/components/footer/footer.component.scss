@@ -61,17 +61,17 @@ footer {
         height: 1px;
         position: relative;
         vertical-align: middle;
-        width: 10%;
+        width: 5%;
       }
       
       p::before {
         right: 1em;
-        margin-left: -50%;
+        margin-left: -40%;
       }
       
       p::after {
         left: 1em;
-        margin-right: -50%;
+        margin-right: -40%;
       }
   }
 
